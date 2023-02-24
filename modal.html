@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/style/modal.css">
+</head>
+<body>
+    <div id="modal-container">
+        <div class="modal-background">
+          <div class="modal">
+            <div class="box-infor">
+                <h2>Họ và tên: Lê Thanh Chung</h2>
+                <h2>Ngày sinh: 01/10/2001</h2>
+                <h2>Nơi ở: Hà Nội</h2>
+                <h2>Nguyên quán: Vĩnh Phúc</h2>
+                <h2>Tốt nghiệp: Vĩnh Phúc</h2>
+            </div>
+            <div class="box-main">
+                <div class="box-item">
+                    <h2 class="light">Thực tập tại công ty cổ phần công nghệ</h2>
+                    <ul>
+                        <li>Tham gia phát triển</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Modal Animations</h1>
+        <div class="buttons">
+          <div id="one" class="button">Unfolding</div>
+        </div>
+      </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('.button').click(function(){
+  var buttonId = $(this).attr('id');
+  $('#modal-container').removeAttr('class').addClass(buttonId);
+  $('body').addClass('modal-active');
+})
+
+$('#modal-container').click(function(){
+  $(this).addClass('out');
+  $('body').removeClass('modal-active');
+});
+</script>
+</html>

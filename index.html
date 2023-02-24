@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style/modal.css">
+    <link rel="stylesheet" href="/assets/style/style.css">
+</head>
+
+<body>
+    <nav class="container menu">
+        <ul>
+            <li>
+                <div id="name">
+                    <h3>Eltic</h3>
+                    <img src="/assets/img/navigation.png" alt="">
+                </div>
+            </li>
+            <li>admin@gmail.com</li>
+            <li class="getInfor" id="one" >Show Infor</li>
+        </ul>
+        <div id="bar">
+            <img src="/assets/img/menu.png" alt="">
+        </div>
+    </nav>
+    <div class="main container">
+        <div class="box-intro">
+            <h1>Hi,</h1>
+            <h1>I'm <span style="--clr:#00dc82">
+                    <a href="#" data-text="&nbsp;LT.Chung">&nbsp;LT.Chung&nbsp;</a>
+                </span></h1>
+            <h1>User interface Designer</h1>
+            <div class="btn">
+                <p>My Project</p>
+                <div id="arrow">
+                    <img src="/assets/img/arrow.png" alt="">
+                </div>
+                <div id="mask"></div>
+            </div>
+        </div>
+        <div class="box-content">
+            <div class="title">
+                <h3>Expert on</h3>
+                <h2>Based in Netherland</h2>
+                <h2>i'm developer and</h2>
+                <h2>UI/UX designer</h2>
+            </div>
+            <div class="des">
+                <h3>Hey are looking for designer to build</h3>
+                <h3>your brand and grow your business?</h3>
+                <h3>let's shake hands with me.</h3>
+            </div>
+            <span class="btn-download">
+                <p>Download CV</p>
+                <img src="/assets/img/download.png" alt="">
+            </span>
+        </div>
+    </div>
+    <footer class="container">
+        <div class="contact container">
+            <div class="contact-item">
+                <a href="https://www.facebook.com/eltic88"  target="_blank"><img src="/assets/img/facebook.png" alt=""></a>
+            </div>
+            <div class="contact-item">
+                <a href=""><img src="/assets/img/linkedin.png" alt=""></a>
+            </div>
+            <div class="contact-item">
+                <a href=""><img src="/assets/img/instagram.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <div id="logo container">
+        <!-- <img src="/assets/img/bg.png" alt=""> -->
+    </div>
+    <!-- modal -->
+    <div id="modal-container">
+        <div class="modal-background">
+          <div class="modal">
+            <div class="box-infor">
+                <h2>Họ và tên: Lê Thanh Chung</h2>
+                <h2>Ngày sinh: 01/10/2001</h2>
+                <h2>Nơi ở: Hà Nội</h2>
+                <h2>Nguyên quán: Vĩnh Phúc</h2>
+                <h2>Tốt nghiệp: Vĩnh Phúc</h2>
+            </div>
+            <div class="box-main">
+                <div class="box-item">
+                    <h2 class="light">Thực tập tại công ty cổ phần công nghệ</h2>
+                    <ul>
+                        <li>Tham gia phát triển</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('.getInfor').click(function(){
+  var buttonId = $(this).attr('id');
+  $('#modal-container').removeAttr('class').addClass(buttonId);
+  $('body').addClass('modal-active');
+})
+
+$('#modal-container').click(function(){
+  $(this).addClass('out');
+  $('body').removeClass('modal-active');
+});
+</script>
+</html>
