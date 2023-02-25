@@ -193,9 +193,9 @@ html.modal-active, body.modal-active {
   vertical-align: middle;
 }
 #modal-container .modal-background .modal {
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.18);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 50px;
   display: inline-flex;
@@ -225,6 +225,15 @@ html.modal-active, body.modal-active {
   stroke-width: 2px;
   stroke-dasharray: 778;
   stroke-dashoffset: 778;
+}
+
+.modal li {
+  list-style: circle;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+.modal h3 {
+  margin-bottom: 5px;
 }
 
 .box-infor {
