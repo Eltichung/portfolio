@@ -341,7 +341,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
 }
 .modal-about .box-about .about-image {
-  width: 200px;
+  width: 350px;
 }
 .modal-about .box-about .about-image img {
   width: 100%;
