@@ -11,110 +11,178 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/modal.css">
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 
 <body>
-    <img src="./assets/img/me.png" alt="" id="portrait">
-    <nav class="container menu">
-        <ul>
-            <li>
-                <div id="name">
-                    <h3>Eltic</h3>
-                    <img src="./assets/img/navigation.png" alt="">
+    <div id="home">
+        <img src="./assets/img/me.png" alt="" id="portrait">
+        <nav class="container menu">
+            <ul>
+                <li>
+                    <div id="name">
+                        <h3>Eltic</h3>
+                        <img src="./assets/img/navigation.png" alt="">
+                    </div>
+                </li>
+                <li>admin@gmail.com</li>
+            </ul>
+            <div id="bar">
+                <img src="./assets/img/menu.png" alt="">
+            </div>
+        </nav>
+        <div class="main container">
+            <div class="box-intro">
+                <h1>Hi,</h1>
+                <h1>I'm <span style="--clr:#00dc82">
+                        <a href="#" data-text="&nbsp;LT.Chung">&nbsp;LT.Chung&nbsp;</a>
+                    </span></h1>
+                <h1 id="job">Fullstack Web Developer</h1>
+                <a href="#project">
+                    <div class="btn">
+                        <p>My Project</p>
+                        <div id="arrow">
+                            <img src="./assets/img/arrow.png" alt="">
+                        </div>
+                        <div id="mask"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="box-content">
+                <div class="title">
+                    <h3>Expert on</h3>
+                    <h2>Based in Netherland</h2>
+                    <h2>i'm developer and</h2>
+                    <h2>UI/UX designer</h2>
                 </div>
-            </li>
-            <li>admin@gmail.com</li>
-            <li class="getInfor" id="one" >Show Infor</li>
-        </ul>
-        <div id="bar">
-            <img src="./assets/img/menu.png" alt="">
-        </div>
-    </nav>
-    <div class="main container">
-        <div class="box-intro">
-            <h1>Hi,</h1>
-            <h1>I'm <span style="--clr:#00dc82">
-                    <a href="#" data-text="&nbsp;LT.Chung">&nbsp;LT.Chung&nbsp;</a>
-                </span></h1>
-            <h1>Fullstack Web Developer</h1>
-            <div class="btn">
-                <p>My Project</p>
-                <div id="arrow">
-                    <img src="./assets/img/arrow.png" alt="">
+                <div class="des">
+                    <h3>Hey are looking for designer to build</h3>
+                    <h3>your brand and grow your business?</h3>
+                    <h3>let's shake hands with me.</h3>
                 </div>
-                <div id="mask"></div>
+                <a href="./assets/pdf/cv.pdf" download>
+                    <span class="btn-download">
+                        <p>Download CV</p>
+                        <img src="./assets/img/download.png" alt="">
+                    </span>
+                </a>
             </div>
         </div>
-        <div class="box-content">
-            <div class="title">
-                <h3>Expert on</h3>
-                <h2>Based in Netherland</h2>
-                <h2>i'm developer and</h2>
-                <h2>UI/UX designer</h2>
+        <footer class="container">
+            <div class="contact container">
+                <div class="contact-item">
+                    <a href="https://www.facebook.com/eltic88"  target="_blank"><img src="./assets/img/facebook.png" alt=""></a>
+                </div>
+                <div class="contact-item">
+                    <a href=""><img src="./assets/img/linkedin.png" alt=""></a>
+                </div>
+                <div class="contact-item">
+                    <a href=""><img src="./assets/img/instagram.png" alt=""></a>
+                </div>
             </div>
-            <div class="des">
-                <h3>Hey are looking for designer to build</h3>
-                <h3>your brand and grow your business?</h3>
-                <h3>let's shake hands with me.</h3>
+        </footer>
+        <!-- <div id="logo" class="container">
+            <img src="./assets/img/chatbot.png" alt="">
+        </div> -->
+    </div>
+    <div class="modal-about">
+        <div class="box-about container">
+            <div>
+                <h3 class="about-title">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    About Me
+                </h3>
             </div>
-            <span class="btn-download">
-                <p>Download CV</p>
-                <img src="./assets/img/download.png" alt="">
-            </span>
+            <div class="about">
+                <div class="about-image">
+                    <img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-cute-cartoon-cartoon-lovely-fresh-png-image_496764.jpg" alt="">
+                </div>
+                <div class="about-infor">
+                    <div class="about-infor-item">
+                        <p>Name</p>
+                        <p>123 213214 2144 21</p>
+                    </div>
+                    <div class="about-infor-item">
+                        <p>Date of birth</p>
+                        <p>123 213214 2144 21</p>
+                    </div>
+                    <div class="about-infor-item">
+                        <p>Address</p>
+                        <p>123 213214 2144 21</p>
+                    </div>
+                    <div class="about-infor-item">
+                        <p>Hometown</p>
+                        <p>123 213214 2144 21</p>
+                    </div>
+                    <div class="about-infor-item">
+                        <p>Graduate</p>
+                        <p>123 213214 2144 21</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <footer class="container">
-        <div class="contact container">
-            <div class="contact-item">
-                <a href="https://www.facebook.com/eltic88"  target="_blank"><img src="./assets/img/facebook.png" alt=""></a>
+    <div class="modal-project" id="project">
+        <div class="box-project container">
+            <div>
+                <h3 class="about-title">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    My project
+                </h3>
             </div>
-            <div class="contact-item">
-                <a href=""><img src="./assets/img/linkedin.png" alt=""></a>
-            </div>
-            <div class="contact-item">
-                <a href=""><img src="./assets/img/instagram.png" alt=""></a>
-            </div>
-        </div>
-    </footer>
-    <div id="logo" class="container">
-        <img src="./assets/img/search.png" alt="">
-    </div>
-    <!-- modal -->
-    <div id="modal-container">
-        <div class="modal-background">
-          <div class="modal">
-            <div class="box-infor">
-                <h3>Họ và tên: Lê Thanh Chung</h3>
-                <h3>Ngày sinh: 01/10/2001</h3>
-                <h3>Nơi ở: Hà Nội</h3>
-                <h3>Nguyên quán: Vĩnh Phúc</h3>
-                <h3>Tốt nghiệp: Vĩnh Phúc</h3>
-            </div>
-            <div class="box-main">
-                <div class="box-item">
-                    <h3 class="light">Thực tập tại công ty cổ phần công nghệ Paditech</h3>
-                    <ul>
-                        <li>Cắt giao diện html, css, js từ file figma</li>
-                        <li>Phát triển phía frontend bằng nuxtjs</li>
-                        <li>Viết resfull API bằng lavarel</li>
-                    </ul>
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-cute-cartoon-cartoon-lovely-fresh-png-image_496764.jpg" alt=""></div>
+                          <div class="swiper-slide"><img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-cute-cartoon-cartoon-lovely-fresh-png-image_496764.jpg" alt=""></div>
+                          <div class="swiper-slide"><img src="https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-cute-cartoon-cartoon-lovely-fresh-png-image_496764.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="project-item-text">
+                        <h1>Forest Story</h1>
+                        <p class="time">T4 October 2021</p>
+                        <div class="border"></div>
+                        <p class="describe-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis unde voluptates nihil, ad sint nostrum reprehenderit, dicta optio sapiente neque corrupti placeat quibusdam molestiae, esse deserunt? Dicta perferendis maiores error!</p>
+                        <p class="describe-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <a id="github">Link github <span><img src="./assets/img/right-arrow.png" alt=""></span></a>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script>
-    $('.getInfor').click(function(){
-  var buttonId = $(this).attr('id');
-  $('#modal-container').removeAttr('class').addClass(buttonId);
-  $('body').addClass('modal-active');
-})
+//     $('.getInfor').click(function(){
+//   var buttonId = $(this).attr('id');
+//   $('#modal-container').removeAttr('class').addClass(buttonId);
+//   $('body').addClass('modal-active');
+// })
 
-$('#modal-container').click(function(){
-  $(this).addClass('out');
-  $('body').removeClass('modal-active');
-});
+// $('#modal-container').click(function(){
+//   $(this).addClass('out');
+//   $('body').removeClass('modal-active');
+// });
+var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 </script>
 </html>

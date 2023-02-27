@@ -2,7 +2,12 @@ $white: #fff;
 $red: #eb4a4a;
 $black: #000;
 $gray: #a7a7a7;
-
+$green: #00dc82;
+$bg-second: #012532;
+$text-blue: #86a6b6;
+html {
+    scroll-behavior: smooth;
+  }
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +19,11 @@ li {
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
 }
 
 .container {
@@ -28,13 +38,36 @@ body {
     font-weight: 400;
     color: $white;
     font-size: 16px;
+    width: 100vw;
+    overflow-x: hidden;
     background-color: $black;
-    height: 100vh;
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        background-color: $black;
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        background-color: $green;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: $green;
+    }
+}
+
+#home {
+    min-height: 100vh;
     width: 100vw;
     position: relative;
+    // border-bottom: 1px solid $green;
 }
-#portrait
-{
+
+#portrait {
     display: block;
     max-width: 100vw;
     max-height: 75vh;
@@ -46,6 +79,7 @@ body {
     transform: translateX(-45%);
 
 }
+
 .menu {
     padding-top: 50px;
     display: flex;
@@ -63,6 +97,7 @@ body {
             gap: 5px;
             align-items: flex-end;
             position: relative;
+            margin-right: 80px;
 
             h3 {
                 font-size: 150%;
@@ -128,6 +163,10 @@ body {
 
                 }
             }
+        }
+
+        #job {
+            font-size: 210%;
         }
 
         .btn {
@@ -219,10 +258,12 @@ body {
 
 .contact {
     position: absolute;
-    bottom: 50px;
+    bottom: 5vh;
     display: flex;
     // flex-direction: column;
     gap: 25px;
+    padding: 0;
+
     &-item {
         opacity: 0.7;
         cursor: pointer;
@@ -235,33 +276,35 @@ body {
         }
     }
 }
-.getInfor
-{
+
+.getInfor {
     cursor: pointer;
 }
+
 #logo {
     position: absolute;
     right: 80px;
     bottom: 50px;
     display: block;
-    background-color: $red;
-    width: 50px;
+    width: 80px;
     height: 50px;
-    border-radius:100%;
+    border-radius: 100%;
     display: flex;
     cursor: pointer;
+
     img {
-        width: 30px;
+        width: 100%;
         display: block;
         margin: auto;
         object-fit: contain;
     }
 }
-.modal
-{
+
+.modal {
     display: flex;
     gap: 100px;
 }
+
 @keyframes name {
     0% {
         width: 0%;
@@ -270,5 +313,197 @@ body {
     100% {
         width: 100%;
         filter: drop-shadow(0 0 25px var(--clr));
+    }
+}
+
+@keyframes neon1 {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+        transition: 1s;
+        transform: translateX(-80%);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: skewX(-15deg);
+    }
+
+    5% {
+        transform: skewX(15deg);
+    }
+
+    10% {
+        transform: skewX(-15deg);
+    }
+
+    15% {
+        transform: skewX(15deg);
+    }
+
+    20% {
+        transform: skewX(0deg);
+    }
+
+    100% {
+        transform: skewX(0deg);
+    }
+}
+
+//about
+.about-title {
+    font-size: 175%;
+    color: $green;
+    position: relative;
+    white-space: nowrap;
+    display: inline;
+
+    span {
+        position: absolute;
+        display: block;
+    }
+
+    span:nth-child(1) {
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #FF0074);
+        animation: neon1 1.5s linear infinite alternate;
+    }
+}
+
+.modal-about {
+    background-color: $bg-second;
+    color: $text-blue;
+
+    .box-about {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+
+        .about {
+            // width: 40%;
+            padding-top: 80px;
+            margin: 0 auto;
+            display: inline-flex;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+
+            &-image {
+                width: 200px;
+
+                // background-color: red;
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            &-infor {
+
+                // padding-top: 50px;
+                &-item {
+                    margin-bottom: 10px;
+                    display: flex;
+
+                    p:first-child {
+
+                        min-width: 130px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal-project {
+    padding-top: 50px;
+    background-color: $bg-second;
+}
+
+.box-project {
+    color: $text-blue;
+    padding-bottom: 100px;
+
+    .project-list {
+        margin-top: 60px;
+
+        .project-item {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+
+            .swiper {
+                width: 40% !important;
+                margin: 0 !important;
+            }
+
+            &-text {
+                width: 30%;
+
+                h1 {
+                    font-size: 250%;
+                }
+
+                .time {
+                    margin-top: 10px;
+                    letter-spacing: 5px;
+                }
+
+                .border {
+                    margin: 30px 0;
+                    width: 70px;
+                    height: 1px;
+                    border-bottom: 1px solid $gray;
+                }
+
+                .describe-1 {
+                    margin-bottom: 15px;
+                }
+
+                #github {
+                    font-size: 150%;
+                    margin-top: 25px;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    cursor: pointer;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -moz-background-clip: text;
+                    -moz-text-fill-color: #FF1361;
+                    -ms-background-clip: text;
+                    -ms-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                    background-image: linear-gradient(45deg,
+                            #7794ff,
+                            $white,
+                            #FF1361,
+                            #FFF800);
+                    animation: .8s shake infinite alternate;
+
+                    img {
+
+                        padding-top: 10px;
+
+                    }
+                }
+            }
+        }
+
+        .swiper-slide {
+            border-radius: 5px;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 }

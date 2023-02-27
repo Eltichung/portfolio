@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +13,11 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
 }
 
 .container {
@@ -23,8 +32,27 @@ body {
   font-weight: 400;
   color: #fff;
   font-size: 16px;
+  width: 100vw;
+  overflow-x: hidden;
   background-color: #000;
-  height: 100vh;
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: #000;
+}
+body::-webkit-scrollbar {
+  width: 4px;
+  background-color: #00dc82;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #00dc82;
+}
+
+#home {
+  min-height: 100vh;
   width: 100vw;
   position: relative;
 }
@@ -59,6 +87,7 @@ body {
   gap: 5px;
   align-items: flex-end;
   position: relative;
+  margin-right: 80px;
 }
 .menu ul #name h3 {
   font-size: 150%;
@@ -114,6 +143,9 @@ body {
 .main .box-intro h1 span a:hover::before {
   width: 100%;
   filter: drop-shadow(0 0 25px var(--clr));
+}
+.main .box-intro #job {
+  font-size: 210%;
 }
 .main .box-intro .btn {
   background-color: #eb4a4a;
@@ -188,9 +220,10 @@ body {
 
 .contact {
   position: absolute;
-  bottom: 50px;
+  bottom: 5vh;
   display: flex;
   gap: 25px;
+  padding: 0;
 }
 .contact-item {
   opacity: 0.7;
@@ -212,15 +245,14 @@ body {
   right: 80px;
   bottom: 50px;
   display: block;
-  background-color: #eb4a4a;
-  width: 50px;
+  width: 80px;
   height: 50px;
   border-radius: 100%;
   display: flex;
   cursor: pointer;
 }
 #logo img {
-  width: 30px;
+  width: 100%;
   display: block;
   margin: auto;
   -o-object-fit: contain;
@@ -240,4 +272,154 @@ body {
     width: 100%;
     filter: drop-shadow(0 0 25px var(--clr));
   }
+}
+@keyframes neon1 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+    transition: 1s;
+    transform: translateX(-80%);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: skewX(-15deg);
+  }
+  5% {
+    transform: skewX(15deg);
+  }
+  10% {
+    transform: skewX(-15deg);
+  }
+  15% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+.about-title {
+  font-size: 175%;
+  color: #00dc82;
+  position: relative;
+  white-space: nowrap;
+  display: inline;
+}
+.about-title span {
+  position: absolute;
+  display: block;
+}
+.about-title span:nth-child(1) {
+  top: 100%;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF0074);
+  animation: neon1 1.5s linear infinite alternate;
+}
+
+.modal-about {
+  background-color: #012532;
+  color: #86a6b6;
+}
+.modal-about .box-about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+}
+.modal-about .box-about .about {
+  padding-top: 80px;
+  margin: 0 auto;
+  display: inline-flex;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+}
+.modal-about .box-about .about-image {
+  width: 200px;
+}
+.modal-about .box-about .about-image img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.modal-about .box-about .about-infor-item {
+  margin-bottom: 10px;
+  display: flex;
+}
+.modal-about .box-about .about-infor-item p:first-child {
+  min-width: 130px;
+}
+
+.modal-project {
+  padding-top: 50px;
+  background-color: #012532;
+}
+
+.box-project {
+  color: #86a6b6;
+  padding-bottom: 100px;
+}
+.box-project .project-list {
+  margin-top: 60px;
+}
+.box-project .project-list .project-item {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+.box-project .project-list .project-item .swiper {
+  width: 40% !important;
+  margin: 0 !important;
+}
+.box-project .project-list .project-item-text {
+  width: 30%;
+}
+.box-project .project-list .project-item-text h1 {
+  font-size: 250%;
+}
+.box-project .project-list .project-item-text .time {
+  margin-top: 10px;
+  letter-spacing: 5px;
+}
+.box-project .project-list .project-item-text .border {
+  margin: 30px 0;
+  width: 70px;
+  height: 1px;
+  border-bottom: 1px solid #a7a7a7;
+}
+.box-project .project-list .project-item-text .describe-1 {
+  margin-bottom: 15px;
+}
+.box-project .project-list .project-item-text #github {
+  font-size: 150%;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: #FF1361;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-image: linear-gradient(45deg, #7794ff, #fff, #FF1361, #FFF800);
+  animation: 0.8s shake infinite alternate;
+}
+.box-project .project-list .project-item-text #github img {
+  padding-top: 10px;
+}
+.box-project .project-list .swiper-slide {
+  border-radius: 5px;
+}
+.box-project .project-list .swiper-slide img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
