@@ -438,10 +438,15 @@ body {
             display: flex;
             gap: 50px;
             justify-content: center;
-
+            margin-bottom: 80px;
             .swiper {
                 width: 40% !important;
                 margin: 0 !important;
+                img
+                {
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
 
             &-text {

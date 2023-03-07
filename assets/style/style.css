@@ -372,10 +372,16 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   gap: 50px;
   justify-content: center;
+  margin-bottom: 80px;
 }
 .box-project .project-list .project-item .swiper {
   width: 40% !important;
   margin: 0 !important;
+}
+.box-project .project-list .project-item .swiper img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .box-project .project-list .project-item-text {
   width: 30%;
